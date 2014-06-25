@@ -1,12 +1,19 @@
 window.Animation = {
 
-  initialize: function(divs){
+  initialize: function (divs) {
 
-    // divs is an array of the divs on the page
-    // you can change the background color of the divs, like so:
+    $.each(divs, function () {
+      setInterval(function () {
+        this.css({background: 'black'});
+      }, 1);
+    });
 
-    divs[0].css({background: 'black'});
-
+//    for (i = 0; i < divs.length; i++) {
+//      div = divs[i]
+//      setInterval(function () {
+//        div.css({background: 'black'})
+//      }, 1);
+////      setInterval(divs[i].css({background: 'white'}), 2000);
+//    }
   }
-
 };
